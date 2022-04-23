@@ -21,7 +21,7 @@
 }
 /* middle header */
 #middle-header {
-  height: 100px;
+  height: 150px;
 }
 /* bottom header */
 #bottom-header {
@@ -96,4 +96,24 @@
   width: 80px;
   height: 80px;
   margin: 100px;
+}
+#purchase-quantity {
+  left: 80%;
+  top: 10%;
+  padding: 0.2rem;
+  background: #ed0e24;
+}
+.empty-cart {
+  background: #f1c0c0;
+  width: 15rem;
+  top: 70%;
+  left: 75%;
+  display: none;
+  transition: display 2s;
+}
+.cart:hover .empty-cart {
+  display: block;
+}
+.delete-btn {
+  cursor: pointer;
 }

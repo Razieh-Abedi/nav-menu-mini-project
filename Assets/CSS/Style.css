@@ -3,3 +3,12 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+.main-card {
+  width: 18rem;
+  height: 30rem;
+}
+.main-card img {
+  height: 70%;
+}
+
+

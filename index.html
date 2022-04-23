@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Third project</title>
-    <link rel="stylesheet" href="Assets/CSS/Style.css" />
+    <title>Shopping Cart</title>
+
     <link
       href="https://file.myfontastic.com/xsCgvLnxkVhpFyggExZG26/icons.css"
       rel="stylesheet"
@@ -16,6 +16,18 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Assets/CSS/Style.css" />
+    <link rel="stylesheet" href="Assets/CSS/Header.css" />
   </head>
   <body>
     <header>
@@ -28,27 +40,59 @@
           <a href=""> <i class="icon-twitter"></i></a>
         </div>
       </div>
-      <div id="middle-header">
-        <img src="" alt="" />
-        <button>Get started</button>
+      <div id="middle-header" class="ms-5 pt-2">
+        <ul class="d-flex align-items-center list-unstyled">
+          <li>
+            <a href="" class="text-decoration-none fs-4 text-black-50"
+              >Log in</a
+            >
+          </li>
+          <li>
+            <div class="cart position-relative ps-4">
+              <i class="bi bi-cart fs-1"></i
+              ><span
+                class="rounded-circle position-absolute"
+                id="purchase-quantity"
+                >0</span
+              >
+              <div class="cart-items position-absolute bg-info">
+                <!-- <ul class="item-list list-unstyled d-flex p-2">
+                  <li class="ps-4"><img src="" alt="" />product image</li>
+                  <li class="ps-4"><span>product name</span></li>
+                  <li class="ps-4"><span>product price</span></li>
+                  <li class="ps-4"><span>product quantity</span></li>
+                  <li class="ps-4 delete-btn"><i class="bi bi-trash"></i></li>
+                </ul>
+                <a href=""> <button>View shopping cart</button></a> -->
+              </div>
+              <div
+                class="empty-cart text-center align-items-center rounded pt-2 position-absolute"
+              >
+                <i class="bi bi-emoji-smile fs-3"></i>
+                <p>No products yet!</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
       <div id="bottom-header">
         <nav id="navbar">
           <ul>
-            <li><a href="">BUNDLES</a></li>
-            <li><a href="">DESIGN</a></li>
-            <li><a href="">FREEBIES</a></li>
-            <li><a href="">WEB & TRENDS</a></li>
-            <li><a href="">WEB DEVELOPMENT</a></li>
-            <li><a href="">TUTORIALS</a></li>
-            <li><a href="">WEB DESIGN SOFTWARE</a></li>
+            <li><a href="">Home and Living</a></li>
+            <li><a href="">Clothes</a></li>
+            <li><a href="">Automative</a></li>
+            <li><a href="">Mobile and Accessories</a></li>
+            <li><a href="">Sports and Outdoors</a></li>
+            <li><a href="">Computer and Accessories</a></li>
+            <li><a href="">Games, Books, and Hobbies</a></li>
+            <li><a href="">Health and Beauty</a></li>
           </ul>
         </nav>
         <div id="search">
           <a href=""><i class="icon-search"></i></a>
         </div>
       </div>
-      <div id="vertical-menu">
+      <!-- <div id="vertical-menu">
         <nav>
           <ul>
             <li><a href="">Home</a></li>
@@ -57,22 +101,94 @@
             <li><a href="">Contact</a></li>
           </ul>
         </nav>
-      </div>
+      </div> -->
     </header>
     <main>
-      <div id="aside">
+      <!-- <div id="aside">
         <a href="" class="icon"> <i class="fab fa-linkedin-in"></i></a>
         <a href="" class="icon"> <i class="icon-twitter"></i></a>
         <a href="" class="icon"> <i class="fab fa-pinterest-p"></i></a>
         <a href="" class="icon"> <i class="icon-facebook"></i></a>
-      </div>
+      </div> -->
 
       <!-- <img
         class="icon-img"
         src="assets/Images/icons/linkedin-in-brands.svg"
         alt=""
       /> -->
+      <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+          <div class="col">
+            <div class="card text-center main-card">
+              <img
+                src="Assets/Images/Bose.jpg"
+                class="card-img-top"
+                alt="Bose headphones"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Bose Headphones</h5>
+                <p class="card-text">Bose QuietComfort 35 Wireless</p>
+                <p>Price: $356.00</p>
+                <button class="btn btn-warning add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center main-card">
+              <img
+                src="Assets/Images/Sony.jpg"
+                class="card-img-top"
+                alt="Sony headphones"
+              />
+              <div class="card-body">
+                <h5 class="card-title">SONY Headphones</h5>
+                <p class="card-text">Sony WH-1000XM4 Wireless</p>
+                <p>Price: $348.00</p>
+                <button class="btn btn-warning add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center main-card">
+              <img
+                src="Assets/Images/JBL.jpg"
+                class="card-img-top"
+                alt="JBL headphones"
+              />
+              <div class="card-body">
+                <h5 class="card-title">JBL Headphones</h5>
+                <p class="card-text">JBL CLUB PRO+ TWS True Wireless</p>
+                <p>Price: $77.94</p>
+                <button class="btn btn-warning add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center main-card">
+              <img
+                src="Assets/Images/Jaybird.jpg"
+                class="card-img-top"
+                alt="Jaybird headphones"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Jaybird Headphones</h5>
+                <p class="card-text">Jaybird Vista 2 Truly Wireless</p>
+                <p>Price: $69.94</p>
+                <button class="btn btn-warning add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <script src="Assets/J.S/app.js"></script>
   </body>
 </html>
