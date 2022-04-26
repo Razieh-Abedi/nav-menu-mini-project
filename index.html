@@ -32,20 +32,29 @@
   <body>
     <header>
       <div id="top-header">
-        <div id="l-top-header">
-          <a href=""><i class="icon-envelope"></i>contact@designwebkit.com</a>
-        </div>
+        <nav id="l-top-header">
+          <ul class="d-flex">
+            <li class="ms-2"><a href="">Home</a></li>
+            <li class="ms-2"><a href="">About</a></li>
+            <li class="ms-2"><a href="">Services</a></li>
+            <li class="ms-2"><a href="">Contact</a></li>
+          </ul>
+        </nav>
         <div id="r-top-header">
-          <a href=""> <i class="icon-facebook"></i></a>
-          <a href=""> <i class="icon-twitter"></i></a>
+          <span class="text-white">Follow us on</span>
+          <a href="" class="icon ms-2"> <i class="fab fa-linkedin-in"></i></a>
+          <a href="" class="icon ms-2"> <i class="icon-twitter"></i></a>
+          <a href="" class="icon ms-2"> <i class="fab fa-pinterest-p"></i></a>
+          <a href="" class="icon ms-2"> <i class="icon-facebook"></i></a>
         </div>
       </div>
-      <div id="middle-header" class="ms-5 pt-2">
+      <div
+        id="middle-header"
+        class="py-2 ps-5 pe-5 d-flex align-items-center justify-content-between"
+      >
         <ul class="d-flex align-items-center list-unstyled">
           <li>
-            <a href="" class="text-decoration-none fs-4 text-black-50"
-              >Log in</a
-            >
+            <a href="" class="log-in-a text-decoration-none fs-5">Log in</a>
           </li>
           <li>
             <div class="cart position-relative ps-4">
@@ -55,13 +64,13 @@
                 id="purchase-quantity"
                 >0</span
               >
-              <div class="cart-items position-absolute bg-info">
+              <div class="cart-items position-absolute">
                 <!-- <ul class="item-list list-unstyled d-flex p-2">
                   <li class="ps-4"><img src="" alt="" />product image</li>
                   <li class="ps-4"><span>product name</span></li>
                   <li class="ps-4"><span>product price</span></li>
                   <li class="ps-4"><span>product quantity</span></li>
-                  <li class="ps-4 delete-btn"><i class="bi bi-trash"></i></li>
+                  <li class="ps-4 delete-btn"><i class="bi bi-trash"></i></li> 
                 </ul>
                 <a href=""> <button>View shopping cart</button></a> -->
               </div>
@@ -74,10 +83,14 @@
             </div>
           </li>
         </ul>
+        <div id="search">
+          <label for="search"><i class="icon-search"></i></label>
+          <input type="search" id="search" />
+        </div>
       </div>
       <div id="bottom-header">
         <nav id="navbar">
-          <ul>
+          <ul class="d-flex justify-content-center align-items-center">
             <li><a href="">Home and Living</a></li>
             <li><a href="">Clothes</a></li>
             <li><a href="">Automative</a></li>
@@ -88,35 +101,10 @@
             <li><a href="">Health and Beauty</a></li>
           </ul>
         </nav>
-        <div id="search">
-          <a href=""><i class="icon-search"></i></a>
-        </div>
       </div>
-      <!-- <div id="vertical-menu">
-        <nav>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </nav>
-      </div> -->
     </header>
     <main>
-      <!-- <div id="aside">
-        <a href="" class="icon"> <i class="fab fa-linkedin-in"></i></a>
-        <a href="" class="icon"> <i class="icon-twitter"></i></a>
-        <a href="" class="icon"> <i class="fab fa-pinterest-p"></i></a>
-        <a href="" class="icon"> <i class="icon-facebook"></i></a>
-      </div> -->
-
-      <!-- <img
-        class="icon-img"
-        src="assets/Images/icons/linkedin-in-brands.svg"
-        alt=""
-      /> -->
-      <div class="container my-5">
+      <div class="container my-5 dash-card">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
           <div class="col">
             <div class="card text-center main-card">
@@ -129,9 +117,7 @@
                 <h5 class="card-title product-name">Bose Headphones</h5>
                 <p class="card-text">Bose QuietComfort 35 Wireless</p>
                 <p class="product-price">Price: $356.00</p>
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
+                <button class="btn add-cart-btn">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -146,9 +132,7 @@
                 <h5 class="card-title product-name">SONY Headphones</h5>
                 <p class="card-text">Sony WH-1000XM4 Wireless</p>
                 <p class="product-price">Price: $348.00</p>
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
+                <button class="btn add-cart-btn">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -163,9 +147,7 @@
                 <h5 class="card-title product-name">JBL Headphones</h5>
                 <p class="card-text">JBL CLUB PRO+ TWS True Wireless</p>
                 <p class="product-price">Price: $77.94</p>
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
+                <button class="btn add-cart-btn">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -180,9 +162,7 @@
                 <h5 class="card-title product-name">Jaybird Headphones</h5>
                 <p class="card-text">Jaybird Vista 2 Truly Wireless</p>
                 <p class="product-price">Price: $69.94</p>
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
+                <button class="btn add-cart-btn">Add to Cart</button>
               </div>
             </div>
           </div>
