@@ -15,14 +15,10 @@ body {
   height: 45pt;
 }
 .cart-items {
+ 
   background: #edede8;
 }
-.view-cart-btn {
-  background: #d3d6a8;
-  width: 40%;
-  padding: 5pt 3pt;
-  box-shadow: 0px 0px 5px 2px #8b8d71;
-}
+
 .delete-icon {
   cursor: pointer;
 }

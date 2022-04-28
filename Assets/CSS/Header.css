@@ -64,18 +64,28 @@
 }
 .empty-cart {
   background: #f1c0c0;
-  width: 15rem;
-  top: 70%;
-  left: 75%;
-  display: none;
-  transition: display 2s;
+  /* transition: display 2s; */
 }
-.cart:hover .empty-cart {
-  display: block;
-}
+
 .delete-btn {
   cursor: pointer;
 }
-.item-list {
+
+.bottom-cart{
+  display: none;
+}
+
+.view-cart{
+  background: #d3d6a8;
+  box-shadow: 0px 0px 5px 2px #8b8d71;
+}
+
+.cart-content{
+  background-color: red;
+  width: 27rem;
+  min-height: 100px;
   z-index: 100;
 }
+/* .cart:hover .cart-content {
+  display: block;
+} */
