@@ -10,18 +10,6 @@ body {
 .main-card img {
   height: 70%;
 }
-.purchaseItemImg {
-  width: 75pt;
-  height: 45pt;
-}
-.cart-items {
- 
-  background: #edede8;
-}
-
-.delete-icon {
-  cursor: pointer;
-}
 .add-cart-btn {
   color: white;
   background: #92b1bc;

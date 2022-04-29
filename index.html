@@ -31,7 +31,7 @@
   </head>
   <body>
     <header>
-      <div id="top-header">
+      <div id="top-header" class="d-flex justify-content-between">
         <nav id="l-top-header">
           <ul class="d-flex">
             <li class="ms-2"><a href="">Home</a></li>
@@ -52,50 +52,51 @@
         id="middle-header"
         class="py-2 ps-5 pe-5 d-flex align-items-center justify-content-between"
       >
-        <ul class="d-flex align-items-center list-unstyled">
-          <li>
+        <div id="l-middle-header" class="d-flex align-items-center">
+          <div>
             <a href="" class="log-in-a text-decoration-none fs-5">Log in</a>
-          </li>
-
-          <li>
-            <div class="cart position-relative ps-4">
-
-              <i class="bi bi-cart fs-1"></i>
-              <span class="rounded-circle position-absolute" id="purchase-quantity">0</span>
-
-              <div class="cart-content position-absolute">
-                <div class="cart-items">
-                  <!-- <ul class="item-list list-unstyled d-flex p-2">
-                    <li class="ps-4"><img src="" alt="" />product image</li>
-                    <li class="ps-4"><span>product name</span></li>
-                    <li class="ps-4"><span>product price</span></li>
-                    <li class="ps-4"><span>product quantity</span></li>
-                    <li class="ps-4 delete-btn"><i class="bi bi-trash"></i></li> 
-                  </ul>
-                  <a href=""> <button>View shopping cart</button></a> -->
-                </div>
-                <div class="bottom-cart justify-content-around">
-                  <div class="total">
-                    <span>Total:</span>
-                    <span class="total-price"> </span>
-                    <span>$</span>
-                  </div>
-
-                  <a  href="" class="view-cart text-decoration-none btn ">View shopping cart</a>
-                 
-                </div>
-                <div class="empty-cart text-center align-items-center rounded pt-2 ">
-                   <i class="bi bi-emoji-smile fs-3"></i>
-                  <p>No products yet!</p>
-                </div>
+          </div>
+          <div class="cart position-relative ps-4">
+            <i class="bi bi-cart fs-1"></i>
+            <span
+              class="rounded-circle position-absolute"
+              id="total-quantity"
+              >0</span
+            >
+            <div class="cart-content position-absolute">
+              <div class="cart-items">
+                <!-- <div class="item-list list-unstyled d-flex p-2">
+                  <div class="ps-4"><img src="" alt="" />product image</div>
+                  <div class="ps-4"><span>product name</span></div>
+                  <div class="ps-4"><span>product price</span></div>
+                  <div class="ps-4"><span>product quantity</span></div>
+                  <div class="ps-4 delete-btn"><i class="bi bi-trash"></i></div>
+                </div> -->
               </div>
-
+              <div class="bottom-cart justify-content-around">
+                <div class="total">
+                  <span>Total:</span>
+                  <span class="total-price"> </span>
+                  <span>$</span>
+                </div>
+                <a href="" class="view-cart text-decoration-none btn"
+                  >View shopping cart</a
+                >
+              </div>
+              <div
+                class="empty-cart text-center align-items-center rounded pt-2"
+              >
+                <i class="bi bi-emoji-smile fs-3"></i>
+                <p>No products yet!</p>
+              </div>
             </div>
-          </li>
-        </ul>
-        <div id="search">
-          <label for="search"><i class="icon-search"></i></label>
-          <input type="search" id="search" />
+          </div>
+        </div>
+        <div id="r-middle-header">
+          <div id="search">
+            <label for="search"><i class="icon-search"></i></label>
+            <input type="search" id="search" />
+          </div>
         </div>
       </div>
       <div id="bottom-header">

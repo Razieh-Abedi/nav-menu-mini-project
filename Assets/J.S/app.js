@@ -1,56 +1,45 @@
 //////Add items to the cart///////
 document.querySelectorAll(".add-cart-btn").forEach((element) => {
   element.addEventListener("click", (event) => {
-    // console.log(event);
-    // console.log(event.target);
     let product = event.target.parentElement.parentElement;
-    addPurchaseQuantity();
-    addPurchaseItem(product);
+    addQuantity();
+    addItem(product);
   });
 });
 
-let purchaseQuantity = document.getElementById("purchase-quantity");
-function addPurchaseQuantity() {
-  ++purchaseQuantity.innerText;
-  // purchaseQuantity.innerText++;
+let totalQuantity = document.getElementById("total-quantity");
+function addQuantity() {
+  ++totalQuantity.innerText;
 }
 
-function subtractPurchaseQuantity() {
-  // let purchaseQuantityNo = purchaseQuantity.innerText;
-  let itemQuantity = document.querySelector(".item-quantity");
-  purchaseQuantity.innerText -= itemQuantity.innerText;
+function subtractProductQuantity() {
+  totalQuantity.innerText -= pInfo.quantity;
 }
 function porductInfo() {
   let productImg = product.querySelector(".product-img").src;
   let productName = product.querySelector(".product-name").innerText;
   let productPrice = product.querySelector(".product-price").innerText;
-
+  let productQuantity = document.getElementById("product-quantity").innerText;
   return {
-    name,
-    img,
-    price,
-  }
-  
+    img: productImg,
+    name: productName,
+    price: productPrice,
+    quantity: productQuantity,
+  };
 }
 
-function addPurchaseItem(product) {
-  // console.log(product);
- 
-  let pInfo=porductInfo()
+function addItem(product) {
+  // let pInfo = porductInfo();
   document.querySelector(".bottom-cart").style.display = "flex";
   document.querySelector(".empty-cart").style.display = "none";
+  // pInfo = +porductInfo.quantity == 1;
 
-  let itemQuantity=1
-  let cartItem = `<div class="item-list list-unstyled d-flex p-2">
-      <div class="ps-4"><img src="${productImg}" alt="" class="purchaseItemImg"/></div>
-      <div class="ps-4"><span>${productName}</span></div>
-      <div class="ps-4"><span>${productPrice}</span></div>
-      <div class="ps-4">
-        <span class="item-quantity">${itemQuantity} </span>
-      </div>
-      <div class="ps-4 delete-btn">
-        <i class="bi bi-trash text-danger delete-icon"></i>
-      </div>
+  let cartItem = `<div class="item-list d-flex p-2">
+      <div class="ps-4 product-img"><img src="${porductInfo.img}" alt="" class="item-img"/></div>
+      <div class="ps-4 product-name"><span>${porductInfo.name}</span></div>
+      <div class="ps-4 product-price"><span>${porductInfo.price}</span></div>
+      <div class="ps-4 product-quantity"><span>${porductInfo.quantity} </span></div>
+      <div class="ps-4 delete-btn"><i class="bi bi-trash text-danger"></i></div>
       </div>`;
   document.querySelector(".cart-items").innerHTML += cartItem;
 
@@ -62,16 +51,14 @@ function setDeleteItem() {
 
   deleteBtn.forEach((item) => {
     item.addEventListener("click", (event) => {
-      let addedProduct = event.target.parentElement.parentElement;
-     
-      subtractPurchaseQuantity();
-      if (purchaseQuantity.innerText <=0 ) {
+      let addedProduct = event.target.parentElement;
+
+      subtractProductQuantity();
+      if (totalQuantity.innerText <= 0) {
         document.querySelector(".bottom-cart").style.display = "none";
         document.querySelector(".empty-cart").style.display = "block";
       }
       addedProduct.remove();
-
-     
     });
   });
 }
