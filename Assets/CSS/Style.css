@@ -18,3 +18,12 @@ body {
 .add-cart-btn:hover {
   color: black;
 }
+/* footer */
+.footer-site-credit {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin: auto;
+  display: block;
+  width: 50%;
+}
